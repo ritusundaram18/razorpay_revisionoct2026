@@ -1,7 +1,7 @@
 package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity;
 
+import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.Environment;
 import jakarta.persistence.*;
-import org.hibernate.cfg.Environment;
 
 import java.util.UUID;
 
