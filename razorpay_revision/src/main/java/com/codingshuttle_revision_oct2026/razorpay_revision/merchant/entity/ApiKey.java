@@ -2,11 +2,16 @@ package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity;
 
 import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.Environment;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
-@Table(name = "api_key")
+@Table(name = "api_key")@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class ApiKey {
 
     @Id

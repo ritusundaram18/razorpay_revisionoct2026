@@ -1,4 +1,4 @@
-package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity;
+package com.codingshuttle_revision_oct2026.razorpay_revision.operations.entity;
 
 import com.codingshuttle_revision_oct2026.razorpay_revision.operations.entity.WebhookEvent;
 import jakarta.persistence.*;
