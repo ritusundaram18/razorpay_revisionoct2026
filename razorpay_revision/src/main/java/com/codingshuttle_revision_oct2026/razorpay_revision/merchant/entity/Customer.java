@@ -2,13 +2,18 @@ package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity;
 
 
 import jakarta.persistence.*;
+import lombok.*;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name="customer")
+@Table(name="customer")@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

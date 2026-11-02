@@ -2,11 +2,17 @@ package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity;
 
 import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.UserRole;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Table(name="app_user")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class AppUser {
 
     @Id
@@ -15,6 +21,7 @@ public class AppUser {
 
 
     @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "merchant_id")
     private Merchant merchant;
 
     @Column(unique = true,nullable = false)private String email;

@@ -9,10 +9,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name="merchants")
-//@Getter
-//@Setter
-//@AllArgsConstructor
-//@NoArgsConstructor@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Merchant {
 
     @Id

@@ -1,11 +1,17 @@
 package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Table(name = "merchant_webhook_config")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 class MerchantWebhookConfig {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
