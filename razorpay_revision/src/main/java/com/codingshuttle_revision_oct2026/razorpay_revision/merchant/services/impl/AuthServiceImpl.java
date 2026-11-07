@@ -2,8 +2,9 @@ package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.services.i
 
 import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.MerchantStatus;
 import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.UserRole;
-import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.MerchantResponse;
-import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.MerchantSignupRequest;
+import com.codingshuttle_revision_oct2026.razorpay_revision.common.exception.DuplicateResourceException;
+import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.response.MerchantResponse;
+import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.request.MerchantSignupRequest;
 import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity.AppUser;
 import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.entity.Merchant;
 import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.repopsitory.AppUserRepository;
@@ -28,7 +29,8 @@ public class AuthServiceImpl implements AuthService {
     public MerchantResponse signUp(MerchantSignupRequest request) {
 
         if(merchantRepository.existsByemail(request.email())){
-            throw new RuntimeException("Merchant with email already exists" + request.email() );
+            throw new DuplicateResourceException("DUPLICATE_MERCHANT_EMAIL",
+                    "Merchant with email already exists:" + request.email() );
         }
 
         Merchant merchant= Merchant.builder().businessName(request.businessName())
@@ -43,7 +45,7 @@ public class AuthServiceImpl implements AuthService {
         AppUser appUser=AppUser.builder()
                 .email(request.email())
                 .merchant(merchant)
-                .passwordHash(request.password())
+                .passwordHash(request.password())//TODO encrypt using bcrypt
                 .role(UserRole.OWNER)
                 .build();
         appUserRepository.save(appUser);

@@ -1,4 +1,4 @@
-package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto;
+package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.response;
 
 import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.BusinessType;
 import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.MerchantStatus;

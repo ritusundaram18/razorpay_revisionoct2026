@@ -1,4 +1,4 @@
-package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto;
+package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.request;
 
 import com.codingshuttle_revision_oct2026.razorpay_revision.common.enums.BusinessType;
 import jakarta.validation.constraints.Email;

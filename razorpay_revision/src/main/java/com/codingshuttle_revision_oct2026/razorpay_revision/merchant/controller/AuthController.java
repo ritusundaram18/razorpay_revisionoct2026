@@ -1,8 +1,8 @@
 package com.codingshuttle_revision_oct2026.razorpay_revision.merchant.controller;
 
 
-import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.MerchantSignupRequest;
-import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.MerchantResponse;
+import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.request.MerchantSignupRequest;
+import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.dto.response.MerchantResponse;
 import com.codingshuttle_revision_oct2026.razorpay_revision.merchant.services.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
